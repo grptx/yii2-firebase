@@ -1,0 +1,17 @@
+{
+    "name": "grptx/yii2-firebase",
+    "authors": [
+        {
+            "name": "grptx",
+            "email": "r.rossetti@melogra.no"
+        }
+    ],
+    "require": {
+      "yiisoft/yii2": "^2"
+    },
+    "autoload": {
+        "psr-4": {
+            "grptx\\Firebase\\": "src"
+        }
+    }
+}

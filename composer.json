@@ -1,5 +1,6 @@
 {
     "name": "grptx/yii2-firebase",
+    "type": "yii2-extension",
     "authors": [
         {
             "name": "grptx",
@@ -9,6 +10,7 @@
     "require": {
       "yiisoft/yii2": "^2"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "grptx\\Firebase\\": "src"

@@ -11,6 +11,7 @@ namespace grptx\Firebase;
 use Kreait\Firebase\Database;
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
+use Kreait\Firebase\Exception\ServiceAccountDiscoveryFailed;
 use yii\base\Component;
 
 class Firebase extends Component {
@@ -68,10 +69,17 @@ class Firebase extends Component {
     public function getFirebase()
     {
         if(!$this->_firebase){
-            if($this->getDataBaseUri()) {
+            if($this->getServiceAccount()) {
+                $factory = (new Factory)->withServiceAccount($this->getServiceAccount());
+                if($this->getDataBaseUri()) {
+                    $this->_firebase = $factory->withDatabaseUri($this->getDataBaseUri())->create();
+                } else {
+                    $this->_firebase = (new Factory)->withServiceAccount($this->getServiceAccount())->create();
+                }
+            } else if($this->getDataBaseUri()) {
                 $this->_firebase = (new Factory)->withDatabaseUri($this->getDataBaseUri())->create();
-            } else if($this->getServiceAccount()) {
-                $this->_firebase = (new Factory)->withServiceAccount($this->getServiceAccount())->create();
+            } else {
+                throw new ServiceAccountDiscoveryFailed("cannot retrieve Firebase istance");
             }
         }
         return $this->_firebase;

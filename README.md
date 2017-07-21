@@ -1,6 +1,20 @@
 # yii2-firebase
 
-This component wraps [kreait/firebase-php](https://github.com/kreait/firebase-php/)
+This Yii2 component wraps [kreait/firebase-php](https://github.com/kreait/firebase-php/) and allow to easy connect to the Firebase realtime database 
+
+## Installation
+
+Preferred way to install is through [Composer](https://getcomposer.org): 
+```shell
+php composer.phar require grptx/yii2-firebase:~0.1
+```
+Or, you may add
+
+```php
+"grptx/yii2-firebase": "~0.1"
+```
+
+to the require section of your `composer.json` file and execute `php composer.phar update`.
 
 ## Configuration
 

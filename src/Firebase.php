@@ -28,10 +28,6 @@ class Firebase extends Component {
      */
     private $_serviceAccount;
     /**
-     * @var string
-     */
-    private $_dataBaseUri;
-    /**
      * @var \Kreait\Firebase
      */
     private $_firebase;
@@ -46,11 +42,16 @@ class Firebase extends Component {
     public function getServiceAccount()
     {
         if(!$this->_serviceAccount) {
-            if(!$this->credential_file) {
-                $this->_serviceAccount = ServiceAccount::discover();
-            } else {
-                $this->_serviceAccount = ServiceAccount::fromJsonFile($this->credential_file);
+            try{
+                if(!$this->credential_file) {
+                    $this->_serviceAccount = ServiceAccount::discover();
+                } else {
+                    $this->_serviceAccount = ServiceAccount::fromJsonFile($this->credential_file);
+                }
+            } catch (ServiceAccountDiscoveryFailed $e) {
+                $this->_serviceAccount=null;
             }
+
         }
         return $this->_serviceAccount;
     }
@@ -60,7 +61,7 @@ class Firebase extends Component {
      */
     public function getDataBaseUri()
     {
-        return $this->_dataBaseUri;
+        return $this->database_uri;
     }
 
     /**

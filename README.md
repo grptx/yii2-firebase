@@ -8,7 +8,7 @@ This component wraps [kreait/firebase-php](https://github.com/kreait/firebase-ph
 ...
 'components' => [
     'firebase' => [
-        'class'=>'grptx\Firebase',
+        'class'=>'grptx\Firebase\Firebase',
         'credential_file'=>'credential_file.json',
         'database_uri'=>'https://my-project.firebaseio.com',
     ]

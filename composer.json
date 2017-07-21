@@ -1,19 +1,20 @@
 {
-    "name": "grptx/yii2-firebase",
-    "type": "yii2-extension",
-    "authors": [
-        {
-            "name": "grptx",
-            "email": "r.rossetti@melogra.no"
-        }
-    ],
-    "require": {
-      "yiisoft/yii2": "^2"
-    },
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "grptx\\Firebase\\": "src"
-        }
+  "name": "grptx/yii2-firebase",
+  "type": "yii2-extension",
+  "authors": [
+    {
+      "name": "grptx",
+      "email": "r.rossetti@melogra.no"
     }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2",
+    "kreait/firebase-php": "^3.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "grptx\\Firebase\\": "src"
+    }
+  }
 }

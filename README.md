@@ -6,7 +6,7 @@ This Yii2 component wraps [kreait/firebase-php](https://github.com/kreait/fireba
 
 Preferred way to install is through [Composer](https://getcomposer.org): 
 ```shell
-php composer.phar require grptx/yii2-firebase:~0.1
+php composer.phar require grptx/yii2-firebase:~0.3.1
 ```
 Or, you may add
 

@@ -30,7 +30,7 @@ to the require section of your `composer.json` file and execute `php composer.ph
 ]
 ```
 
-###Optional
+### Optional
 to use the autocomplete function of IDE (i.e. Phpstorm) you can optionally replace in the web/index.php the inclusion of Yii.php file and the Application instance:
 
 replace:

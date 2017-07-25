@@ -30,16 +30,34 @@ to the require section of your `composer.json` file and execute `php composer.ph
 ]
 ```
 
+###Optional
+to use the autocomplete function of IDE (i.e. Phpstorm) you can optionally replace in the web/index.php the inclusion of Yii.php file and the Application instance:
+
+replace:
+```php
+require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
+//and 
+(new yii\web\Application($config))->run();
+```
+with:
+```php
+require (__DIR__.'/../../vendor/grptx/yii2-firebase/src/yii2/Yii.php');
+//and
+(new \grptx\Firebase\web\Application($config))->run();
+
+```
+now when you need you can use grptx\Firebase\yii2\Yii instead of Yii to use autocomplete of your IDE
+
 ## Usage
 
-Retrive a _reference_ and a _value_
+Retrive a _database_ ,_reference_ and a _value_
 ```php
 $database = Yii::$app->firebase->getDatabase();
 $reference = $database->getReference('path/to/child/location');
 $value = $reference->getValue();
 ```
 
-or just the _value_
+or just the _reference_ and a _value_
 
 ```php
 $reference = Yii::$app->firebase->getReference('path/to/child/location');

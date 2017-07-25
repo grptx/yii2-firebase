@@ -11,7 +11,7 @@ php composer.phar require grptx/yii2-firebase:~0.1
 Or, you may add
 
 ```php
-"grptx/yii2-firebase": "~0.3"
+"grptx/yii2-firebase": "~0.3.1"
 ```
 
 to the require section of your `composer.json` file and execute `php composer.phar update`.

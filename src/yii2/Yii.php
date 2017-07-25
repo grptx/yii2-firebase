@@ -7,8 +7,9 @@
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
-namespace grptx\Firebase\yii2;
 require(__DIR__ . '/BaseYii.php');
+
+use grptx\Firebase\yii2\BaseYii;
 use yii\di\Container;
 /**
  * Yii is a helper class serving common framework functionalities.
@@ -20,7 +21,7 @@ use yii\di\Container;
  * @author Roberto Rossetti <r.rossetti@melogra.no>
  * @since 2.0
  */
-class Yii extends \grptx\Firebase\yii2\BaseYii
+class Yii extends BaseYii
 {
 }
 

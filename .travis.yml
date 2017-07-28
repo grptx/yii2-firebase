@@ -18,7 +18,7 @@ install:
 # codeception
   - travis_retry composer global require "codeception/codeception=2.0.*" "codeception/specify=*" "codeception/verify=*"
 # setup application:
-  - codecept build -c tests/codeception.yml
+
 
 
 script:

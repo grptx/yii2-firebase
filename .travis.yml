@@ -21,7 +21,7 @@ install:
   - |
     cd tests
     codecept build
-    cd ..
+
 
 script:
   - |

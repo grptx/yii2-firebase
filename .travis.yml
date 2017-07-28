@@ -18,11 +18,12 @@ install:
 # codeception
   - travis_retry composer global require "codeception/codeception=2.0.*" "codeception/specify=*" "codeception/verify=*"
 # setup application:
-
-
+  - |
+    cd tests
+    codecept build
+    cd ..
 
 script:
   - |
     cd tests
-    pwd
     codecept run

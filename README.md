@@ -1,5 +1,10 @@
 # yii2-firebase
 
+[![Latest Stable Version](https://poser.pugx.org/grptx/yii2-firebase/v/stable)](https://packagist.org/packages/grptx/yii2-firebase)
+[![Total Downloads](https://poser.pugx.org/grptx/yii2-firebase/downloads)](https://packagist.org/packages/grptx/yii2-firebase)
+[![Latest Unstable Version](https://poser.pugx.org/grptx/yii2-firebase/v/unstable)](https://packagist.org/packages/grptx/yii2-firebase)
+[![License](https://poser.pugx.org/grptx/yii2-firebase/license)](https://packagist.org/packages/grptx/yii2-firebase)
+
 This Yii2 component wraps [kreait/firebase-php](https://github.com/kreait/firebase-php/) and allow to easy connect to the Firebase realtime database 
 
 ## Installation

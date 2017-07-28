@@ -19,10 +19,17 @@
     "yiisoft/yii2": "^2",
     "kreait/firebase-php": "^3.0"
   },
+  "require-dev": {
+    "codeception/codeception": "*",
+    "codeception/specify": "*",
+    "codeception/verify": "*",
+    "yiisoft/yii2-faker":"*"
+  },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "grptx\\Firebase\\": "src"
+      "grptx\\Firebase\\": "src",
+      "grptx\\tests\\":"tests/tests"
     }
   }
 }

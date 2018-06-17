@@ -17,7 +17,7 @@
   "description": "Yii2 Component to connect to Firebase Database",
   "require": {
     "yiisoft/yii2": "^2",
-    "kreait/firebase-php": "^3.0"
+    "kreait/firebase-php": "^4.0"
   },
   "require-dev": {
     "codeception/codeception": "*",
